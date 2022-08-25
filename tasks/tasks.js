@@ -1,6 +1,8 @@
 // import functions and grab DOM elements
+import { checkUser } from '../fetch-utils.js';
 
 // let state
+checkUser();
 
 // set event listeners 
   // get user input
