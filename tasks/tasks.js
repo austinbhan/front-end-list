@@ -1,8 +1,14 @@
 // import functions and grab DOM elements
-import { checkUser } from '../fetch-utils.js';
+import { checkUser, logoutUser } from '../fetch-utils.js';
 
 // let state
 checkUser();
+
+const logout = document.getElementById('logout-button');
+
+logout.addEventListener('click', async () => {
+    await logoutUser();
+});
 
 // set event listeners 
   // get user input

@@ -45,3 +45,13 @@ export async function redirectIfLoggedIn() {
         location.replace('./tasks'); // Maybe change directory
     }
 }
+
+export async function logoutUser() {
+    const resp = await fetch(`${BASE_URL}/api/v1/users/sessions`, {
+        method: 'DELETE',
+        credentials: 'include',
+    });
+    if (resp.ok) {
+        location.replace('../');
+    }
+}
